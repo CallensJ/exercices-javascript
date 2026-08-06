@@ -5,11 +5,10 @@ Ce repo regroupe une série d'exercices JavaScript vanilla, pratiqués au quotid
 ## Objectif
 
 Rester performant en JavaScript **sans dépendre de l'IA** pour résoudre les problèmes.
-Chaque jour, ChatGPT fournit un nouvel exercice à réaliser seul, avec une difficulté qui
+Chaque jour, ChatGPT (lol) fournit un nouvel exercice à réaliser seul, avec une difficulté qui
 augmente progressivement : du niveau débutant jusqu'au niveau professionnel / expert / guru.
 
-L'IA (Claude) n'intervient ici que pour l'outillage du repo (structure, config, hub) —
-jamais pour résoudre les exercices eux-mêmes.
+
 
 ## Structure
 
