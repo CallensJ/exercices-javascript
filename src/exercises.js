@@ -3,8 +3,8 @@
 // puis ajoute une entrée ici.
 export const exercises = [
   {
-    title: 'Compteur',
+    title: '01-Statistiques-panier',
     description: 'Un compteur simple pour découvrir la manipulation du DOM.',
-    path: '/exercices/compteur/',
+    path: '/exercices/01-Statistiques-panier/index.html',
   },
 ]
