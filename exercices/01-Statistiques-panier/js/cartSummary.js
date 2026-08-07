@@ -14,67 +14,32 @@
 // Le prix total des produits non achetes: RemainingPrice()
 import products from "./data/data.js";
 
-function productCount() {
 
+export function cartSummary(products) {
 
-  return `productCount: ${products.length}`;
-}
-
-function totalQuantity() {
-//calculer le nombre total de produit dans le panier
-// 1 - initialiser une variable a 0
-  let total = 0;
-  //2 - parcourir la liste des produits
+    let totalQuantity = 0;
+    let totalPrice = 0;
+    let remainingQuantity = 0;
+    let remainingPrice = 0;
+    let productCount = 0;
   for (let product of products) {
-    //3 - ajouter la quantite du produit au total
-    total += product.quantity;
-  }
-  //3 - retourner la valeur
-  return `totalQuantity: ${total}`;
 
-}
 
-function remainingQuantity() {
-//calculer la quantite totale des produits non achetes
-  let total = 0;
-  for (let product of products) {
+    // totalQuantity
+    totalQuantity += product.quantity;
+    //totalPrice
+    totalPrice += product.price * product.quantity;
+    //remainingQuantity
     if (product.purchased === false) {
-      total += product.quantity;
+      remainingQuantity += product.quantity;
     }
-
-  }
-  return `remainingQuantity: ${total}`;
-}
-
-function totalPrice() {
-// calcule le prix total de tous les produits
-
-  let total = 0;
-  for (let product of products) {
-    total += product.price * product.quantity;
-  }
-  return `totalPrice: ${total}`;
-}
-
-function remainingPrice() {
-  //calcul le prix total des produits non achetes
-  let total = 0;
-  for (let product of products) {
+    //remainingPrice
     if (product.purchased === false) {
-      total += product.price * product.quantity;
+      remainingPrice += product.price * product.quantity;
     }
+    //productCount
+    productCount = products.length;
 
   }
-  return `remainingPrice: ${total}`;
-}
-
-
-export function cartSummary() {
-  return [
-    productCount(),
-    totalQuantity(),
-    remainingQuantity(),
-    totalPrice(),
-    remainingPrice(),
-  ];
+    return `totalQuantity: ${totalQuantity}, totalPrice: ${totalPrice}, remainingQuantity: ${remainingQuantity}, remainingPrice: ${remainingPrice}, productCount: ${productCount}`;
 }
