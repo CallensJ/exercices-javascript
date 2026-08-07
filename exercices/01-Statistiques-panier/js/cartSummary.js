@@ -41,5 +41,12 @@ export function cartSummary(products) {
     productCount = products.length;
 
   }
-    return `totalQuantity: ${totalQuantity}, totalPrice: ${totalPrice}, remainingQuantity: ${remainingQuantity}, remainingPrice: ${remainingPrice}, productCount: ${productCount}`;
+   // return `totalQuantity: ${totalQuantity}, totalPrice: ${totalPrice}, remainingQuantity: ${remainingQuantity}, remainingPrice: ${remainingPrice}, productCount: ${productCount}`;
+   return {
+     totalQuantity,
+     totalPrice,
+     remainingQuantity,
+     remainingPrice,
+     productCount,
+   }
 }

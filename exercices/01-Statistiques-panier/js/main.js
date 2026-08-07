@@ -2,11 +2,10 @@ import { cartSummary } from "./cartSummary.js";
 import products from "./data/data.js";
 
 const result = cartSummary(products);
-const lines = Array.isArray(result) ? result : result.split(", ");
 
 const list = document.getElementById("summary");
-for (const line of lines) {
+for (const [key, value] of Object.entries(result)) {
   const li = document.createElement("li");
-  li.textContent = line;
+  li.textContent = `${key}: ${value}`;
   list.appendChild(li);
 }
