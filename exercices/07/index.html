@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Médiathèque — Exercice DOM</title>
+
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <header class="page-header">
+        <p class="eyebrow">Exercice JavaScript 07</p>
+        <h1>Notre médiathèque</h1>
+        <p class="intro">
+          Découvrez les ouvrages actuellement présents dans notre catalogue.
+        </p>
+      </header>
+
+      <section class="books-section" aria-labelledby="books-title">
+        <div class="section-heading">
+          <h2 id="books-title">Livres disponibles au catalogue</h2>
+        </div>
+
+        <div id="books-list" class="books-grid">
+            <!-- Les livres seront insérés ici par JavaScript -->
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
